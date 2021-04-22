@@ -48,6 +48,8 @@ $ git clone <this repo> bcrypt
 $ cd bcrypt
 
 3) Optional: Customize your setup
+Libraries
+Edit Makefile, replace the libldap_r to libldap.
 
 Prefix
 The default prefix is /usr/local which means the module will be installed in
@@ -77,7 +79,7 @@ This will install the module to {prefix}/libexec/openldap/
 
 5) Edit your slapd.conf, and add:
 
-moduleload /usr/local/libexec/openldap/pw-bcrypt.so WORKFACTOR
+moduleload pw-bcrypt.la WORKFACTOR
 (or wherever you ended up putting your module)
 
 The WORKFACTOR argument can be omitted, in which case slapd will use the default
