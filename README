@@ -118,3 +118,7 @@ WARNING: With debugging enabled, all passwords will be logged in plaintext!
 ACKNOWLEDGEMENT:
 This work is based on crypt_blowfish version 1.3 developed by Solar Designer,
 which is available at http://www.openwall.com/crypt/.
+
+Other issue:
+SELINUX IS PREVENTING :https://serverfault.com/questions/1032597/selinux-is-preventing-from-execute-access-on-the-file-centos
+chcon -R -t bin_t /usr/sbin/slapd
